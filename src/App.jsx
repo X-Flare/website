@@ -1,10 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { Outlet, NavLink, useRouteError } from "react-router-dom";
+import styled from "@emotion/styled";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+export function Root({ children }) {
+  return (
+    <>
+      <header>
+        <Navbar />
+      </header>
+      {children || <Outlet />}
+    </>
+  );
+}
+
+export function App() {
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,7 +42,31 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+function Navbar() {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+}
+
+export function ErrorPage() {
+  const error = useRouteError();
+  console.error(error);
+
+  return (
+    <>
+      <p>Error: {error.statusText || error.message}</p>
+    </>
+  );
+}
