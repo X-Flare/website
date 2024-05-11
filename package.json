@@ -2,7 +2,7 @@
   "name": "xflare-robotics",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://x-flare.github.io/website/",
+  "homepage": "https://www.xflare9600.org/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

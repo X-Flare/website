@@ -50,10 +50,10 @@ function Navbar() {
     <nav>
       <ul>
         <li>
-          <NavLink to="/website/">Home</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/website/about">About</NavLink>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
     </nav>

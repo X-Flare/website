@@ -14,7 +14,7 @@ const globalStyles = css`
 
 const router = createBrowserRouter([
   {
-    path: "website",
+    path: "/",
     element: <Root />,
     errorElement: (
       <Root>
