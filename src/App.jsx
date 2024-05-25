@@ -3,7 +3,33 @@ import { Outlet, NavLink, useRouteError } from "react-router-dom";
 import styled from "@emotion/styled";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
+// import "./App.css";
+
+const Header = styled.header`
+background: #ff5722;
+  color: white;
+  padding: 1rem 0;
+`;
+
+const Nav = styled.nav`
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+
+    &:hover {
+      color: #ffab91;
+    }
+  }
+`;
 
 export function Root({ children }) {
   return (
@@ -47,16 +73,18 @@ export function App() {
 
 function Navbar() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/about">About</NavLink>
-        </li>
-      </ul>
-    </nav>
+    <Header>
+      <Nav>
+        <ul>
+          <li>
+            <NavLink to="/">{/*<img src='favicon2.png'/> */}Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+        </ul>
+      </Nav>
+    </Header>
   );
 }
 
