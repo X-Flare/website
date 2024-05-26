@@ -31,13 +31,24 @@ const Nav = styled.nav`
   }
 `;
 
+const Footer = styled.footer`
+background: #d84315;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+`;
+
 export function Root({ children }) {
   return (
     <>
-      <header>
+      <Header>
         <Navbar />
-      </header>
+      </Header>
       {children || <Outlet />}
+      <Footer>
+        <p>Get Involved! <a href='mailto:cyndemom@gmail.com'>cyndemom@gmail.com</a></p>
+        <p>&copy; 2024 XFlare Robotics. All rights reserved.</p>
+      </Footer>
     </>
   );
 }
@@ -73,18 +84,16 @@ export function App() {
 
 function Navbar() {
   return (
-    <Header>
-      <Nav>
-        <ul>
-          <li>
-            <NavLink to="/">{/*<img src='favicon2.png'/> */}Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
-        </ul>
-      </Nav>
-    </Header>
+    <Nav>
+      <ul>
+        <li>
+          <NavLink to="/">{/*<img src='favicon2.png'/> */}Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+      </ul>
+    </Nav>
   );
 }
 

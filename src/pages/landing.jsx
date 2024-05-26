@@ -19,14 +19,6 @@ const Section = styled.section`
   margin-bottom: 2rem;
 `;
 
-const Footer = styled.footer`
-background: #d84315;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-`;
-
-
 
 
 export function LandingPage() {
@@ -57,9 +49,6 @@ export function LandingPage() {
           <p>Contact information...</p>
         </Section>
       </main>
-      <Footer>
-        <p>&copy; 2024 XFlare Robotics. All rights reserved.</p>
-      </Footer>
     </>
   );
 }
